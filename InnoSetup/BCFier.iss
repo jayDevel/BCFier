@@ -24,6 +24,8 @@
 #define RevitAddin21  "{userappdata}\Autodesk\Revit\Addins\2021\"
 #define RevitFolder22 "{userappdata}\Autodesk\Revit\Addins\2022\"+RevitAppName
 #define RevitAddin22  "{userappdata}\Autodesk\Revit\Addins\2022\"
+#define RevitFolder23 "{userappdata}\Autodesk\Revit\Addins\2023\"+RevitAppName
+#define RevitAddin23  "{userappdata}\Autodesk\Revit\Addins\2023\"
 
 #define WinAppName    "Bcfier.Win"
 
@@ -66,6 +68,7 @@ Name: revit19; Description: Addin for Autodesk Revit 2019;  Types: full
 Name: revit20; Description: Addin for Autodesk Revit 2020;  Types: full
 Name: revit21; Description: Addin for Autodesk Revit 2021;  Types: full
 Name: revit22; Description: Addin for Autodesk Revit 2022;  Types: full
+Name: revit23; Description: Addin for Autodesk Revit 2023;  Types: full
 Name: standalone; Description: BCFier for Windows (standalone viewer); Types: full
 
 
@@ -136,6 +139,13 @@ Source: "{#Repository}\{#RevitAppName}\bin\Release-2022\Bcfier.dll"; DestDir: "{
 Source: "{#Repository}\{#RevitAppName}\bin\Release-2022\GongSolutions.WPF.DragDrop.dll"; DestDir: "{#RevitFolder22}"; Flags: ignoreversion; Components: revit22
 Source: "{#Repository}\{#RevitAppName}\bin\Release-2022\RestSharp.dll"; DestDir: "{#RevitFolder22}"; Flags: ignoreversion; Components: revit22
 
+;REVIT 2023                                                                                                                                    
+Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\{#RevitAppName}.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23  
+Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\{#RevitAppName}.addin"; DestDir: "{#RevitAddin23}"; Flags: ignoreversion; Components: revit23
+Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\Bcfier.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23
+Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\GongSolutions.WPF.DragDrop.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23
+Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\RestSharp.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23
+
 
 
 [Icons]
@@ -162,6 +172,7 @@ function IsDotNetDetected(version: string; service: cardinal): boolean;
 //    'v4\Client'     .NET Framework 4.0 Client Profile
 //    'v4\Full'       .NET Framework 4.0 Full Installation
 //    'v4.5'          .NET Framework 4.5
+//    'v4.8'          .NET Framework 4.8
 //
 // service -- Specify any non-negative integer for the required service pack level:
 //    0               No service packs required
@@ -204,13 +215,13 @@ begin
     result := success and (install = 1) and (serviceCount >= service);
 end;
 
-//Revit 2017/18 need 4.6, should update?
+//Revit 2023 need 4.8, should update?
 function InitializeSetup(): Boolean;
 var
   ErrCode: integer;
 begin
-    if not IsDotNetDetected('v4.5', 0) then begin
-      if  MsgBox('{#MyAppName} requires Microsoft .NET Framework 4.5.'#13#13
+    if not IsDotNetDetected('v4.8', 0) then begin
+      if  MsgBox('{#MyAppName} requires Microsoft .NET Framework 4.8.'#13#13
             'Do you want me to open http://www.microsoft.com/net'#13
             'so you can download it?',  mbConfirmation, MB_YESNO) = IDYES
             then begin

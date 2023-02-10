@@ -71,7 +71,7 @@ namespace Bcfier.Navisworks.Data
         //show/hide elements
         //todo: needs improvement
         //todo: add settings
-        if (v.Components != null && v.Components.Any())
+        if (v.Components != null)
         {
           List<ModelItem> attachedElems = new List<ModelItem>();
           List<ModelItem> elems = doc.Models.First.RootItem.DescendantsAndSelf.ToList<ModelItem>();
@@ -80,7 +80,7 @@ namespace Bcfier.Navisworks.Data
           foreach (var item in elems.Where(o => o.InstanceGuid != Guid.Empty))
           {
             string ifcguid = IfcGuid.ToIfcGuid(item.InstanceGuid).ToString();
-            if (v.Components.Any(o => o.IfcGuid == ifcguid))
+            if (v.Components.Visibility.Exceptions.Any(o => o.IfcGuid == ifcguid))
               attachedElems.Add(item);
 
           }

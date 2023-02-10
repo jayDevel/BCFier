@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Bcfier.Revit</RootNamespace>
     <AssemblyName>Bcfier.Revit</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -274,40 +274,72 @@
     <Prefer32Bit>false</Prefer32Bit>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
   </PropertyGroup>
-	<!--2021-->
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2022|AnyCPU'">
-		<DebugSymbols>true</DebugSymbols>
-		<OutputPath>bin\Debug-2022\</OutputPath>
-		<DefineConstants>TRACE;DEBUG;Version2022</DefineConstants>
-		<DebugType>full</DebugType>
-		<PlatformTarget>x64</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-		<RevitVersion>2022</RevitVersion>
-		<AssemblyName>$(AssemblyName)</AssemblyName>
-		<Prefer32Bit>false</Prefer32Bit>
-		<StartAction>Program</StartAction>
-		<StartProgram>C:\Program Files\Autodesk\Revit 2022\Revit.exe</StartProgram>
-		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-	</PropertyGroup>
-	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2022|AnyCPU'">
-		<OutputPath>bin\Release-2022\</OutputPath>
-		<DefineConstants>TRACE;RELEASE;Version2022</DefineConstants>
-		<Optimize>true</Optimize>
-		<DebugType>pdbonly</DebugType>
-		<PlatformTarget>AnyCPU</PlatformTarget>
-		<ErrorReport>prompt</ErrorReport>
-		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-		<RevitVersion>2022</RevitVersion>
-		<AssemblyName>$(AssemblyName)</AssemblyName>
-		<WarningLevel>0</WarningLevel>
-		<ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+  <!--2022-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2022|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2022\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Version2022</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RevitVersion>2022</RevitVersion>
+    <AssemblyName>$(AssemblyName)</AssemblyName>
+    <Prefer32Bit>false</Prefer32Bit>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\Autodesk\Revit 2022\Revit.exe</StartProgram>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2022|AnyCPU'">
+    <OutputPath>bin\Release-2022\</OutputPath>
+    <DefineConstants>TRACE;RELEASE;Version2022</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RevitVersion>2022</RevitVersion>
+    <AssemblyName>$(AssemblyName)</AssemblyName>
+    <WarningLevel>0</WarningLevel>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
 			None
 		</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-		<Prefer32Bit>false</Prefer32Bit>
-		<TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-	</PropertyGroup>
-  
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <!--2023-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2023|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-2023\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Version2023</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RevitVersion>2023</RevitVersion>
+    <AssemblyName>$(AssemblyName)</AssemblyName>
+    <Prefer32Bit>false</Prefer32Bit>
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Program Files\Autodesk\Revit 2023\Revit.exe</StartProgram>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2023|AnyCPU'">
+    <OutputPath>bin\Release-2023\</OutputPath>
+    <DefineConstants>TRACE;RELEASE;Version2023</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RevitVersion>2023</RevitVersion>
+    <AssemblyName>$(AssemblyName)</AssemblyName>
+    <WarningLevel>0</WarningLevel>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+			None
+		</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
   <!-- MULTIVERSION CONFIGURATION END -->
   <ItemGroup>
     <!-- MULTIVERSION REVIT API REFERENCES START -->
@@ -315,13 +347,11 @@
     <!-- 2015 -->
     <!-- 2016 -->
     <!-- 2017 -->
-    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2017'">
-      <HintPath>C:\Program Files\Autodesk\Revit 2017\RevitAPI.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net46\RestSharp.dll</HintPath>
     </Reference>
-    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2017'">
-      <HintPath>C:\Program Files\Autodesk\Revit 2017\RevitAPIUI.dll</HintPath>
-      <Private>False</Private>
+    <Reference Include="RevitAPI">
+      <HintPath>..\..\..\..\..\..\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
     </Reference>
     <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2017'">
       <HintPath>C:\Program Files\Autodesk\Revit 2017\RevitAPIIFC.dll</HintPath>
@@ -379,19 +409,33 @@
       <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPIIFC.dll</HintPath>
       <Private>False</Private>
     </Reference>
-		<!-- 2022 -->
-		<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIIFC.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
+    <!-- 2022 -->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	<!-- 2023 -->
+	<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	
     <!-- RELEASE -->
     <!-- 2015 -->
     <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Release-2015'">
@@ -484,23 +528,33 @@
       <HintPath>C:\Program Files\Autodesk\Revit 2021\RevitAPIIFC.dll</HintPath>
       <Private>False</Private>
     </Reference>
-		<!--2022-->
-		<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Release-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2022'">
-			<HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIIFC.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-    <!-- MULTIVERSION REVIT API REFERENCES END -->
-    <Reference Include="RevitAPIUI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2016\RevitAPIUI.dll</HintPath>
+    <!--2022-->
+    <Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Release-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2022'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2022\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+	<!-- 2023 -->
+	<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+      <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIIFC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- MULTIVERSION REVIT API REFERENCES END -->
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Xml" />
@@ -585,13 +639,13 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+  <PostBuildEvent>
+  </PostBuildEvent>
   </PropertyGroup>
   <!-- MULTIVERSION POST BUILD EVENTS START -->
   <!-- COPIES ALL DLLS AND .ADDIN MANIFEST TO THE RELATIVE REVIT ADDIN FOLDER -->
   <Target Name="AfterBuild">
-    <CallTarget Condition="'$(Configuration)' == 'Debug-2022' Or '$(Configuration)' == 'Debug-2021' Or '$(Configuration)' == 'Debug-2020' Or '$(Configuration)' == 'Debug-2018' Or '$(Configuration)' == 'Debug-2019'" Targets="AfterBuildDebug" />
+    <CallTarget Condition="'$(Configuration)' == 'Debug-2023' Or '$(Configuration)' == 'Debug-2022' Or '$(Configuration)' == 'Debug-2021' Or '$(Configuration)' == 'Debug-2020' Or '$(Configuration)' == 'Debug-2018' Or '$(Configuration)' == 'Debug-2019'" Targets="AfterBuildDebug" />
   </Target>
   <Target Name="AfterBuildDebug">
     <ItemGroup>
