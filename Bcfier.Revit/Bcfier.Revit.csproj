@@ -542,15 +542,15 @@
       <Private>False</Private>
     </Reference>
 	<!-- 2023 -->
-	<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Debug-2023'">
+	<Reference Include="RevitAPI" Condition="'$(Configuration)' == 'Release-2023'">
       <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2023'">
       <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIUI.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Debug-2023'">
+    <Reference Include="RevitAPIUI" Condition="'$(Configuration)' == 'Release-2023'">
       <HintPath>C:\Program Files\Autodesk\Revit 2023\RevitAPIIFC.dll</HintPath>
       <Private>False</Private>
     </Reference>

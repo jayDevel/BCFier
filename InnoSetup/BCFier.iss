@@ -7,6 +7,7 @@
 #define MyAppExeName   "Bcfier.Win.exe"
 
 #define RevitAppName  "Bcfier.Revit"
+#define NavisAppName  "Bcfier.Navisworks"
 ;#define RevitAddinFolder "{sd}\ProgramData\Autodesk\Revit\Addins"
 ;#define RevitFolder15 RevitAddinFolder+"\2015\"+RevitAppName
 ;#define RevitAddin15  RevitAddinFolder+"\2015\"
@@ -26,6 +27,9 @@
 #define RevitAddin22  "{userappdata}\Autodesk\Revit\Addins\2022\"
 #define RevitFolder23 "{userappdata}\Autodesk\Revit\Addins\2023\"+RevitAppName
 #define RevitAddin23  "{userappdata}\Autodesk\Revit\Addins\2023\"
+
+#define NavisFolder23 "{userappdata}\Autodesk\Navisworks Manage 2023\Plugins\"+NavisAppName
+#define NavisAddin23  "{userappdata}\Autodesk\Navisworks Manage 2023\Plugins\"
 
 #define WinAppName    "Bcfier.Win"
 
@@ -69,6 +73,7 @@ Name: revit20; Description: Addin for Autodesk Revit 2020;  Types: full
 Name: revit21; Description: Addin for Autodesk Revit 2021;  Types: full
 Name: revit22; Description: Addin for Autodesk Revit 2022;  Types: full
 Name: revit23; Description: Addin for Autodesk Revit 2023;  Types: full
+Name: navis23; Description: Addin for Autodesk Navisworks 2023;  Types: full
 Name: standalone; Description: BCFier for Windows (standalone viewer); Types: full
 
 
@@ -146,6 +151,11 @@ Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\Bcfier.dll"; DestDir: "{
 Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\GongSolutions.WPF.DragDrop.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23
 Source: "{#Repository}\{#RevitAppName}\bin\Release-2023\RestSharp.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: revit23
 
+;NAVISWORKS 2023  
+Source: "{#Repository}\{#NavisAppName}\bin\Release-2023\{#NavisAppName}.dll"; DestDir: "{#NavisFolder23}"; Flags: ignoreversion; Components: navis23  
+Source: "{#Repository}\{#NavisAppName}\bin\Release-2023\Bcfier.dll"; DestDir: "{#NavisFolder23}"; Flags: ignoreversion; Components: navis23
+Source: "{#Repository}\{#NavisAppName}\bin\Release-2023\GongSolutions.WPF.DragDrop.dll"; DestDir: "{#RevitFolder23}"; Flags: ignoreversion; Components: navis23
+Source: "{#Repository}\{#NavisAppName}\bin\Release-2023\RestSharp.dll"; DestDir: "{#NavisFolder23}"; Flags: ignoreversion; Components: navis23
 
 
 [Icons]

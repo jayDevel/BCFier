@@ -149,7 +149,7 @@
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2019</NavisVersion>
+    <NavisVersion>2019</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2019|AnyCPU'">
@@ -161,7 +161,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2019</NavisVersion>
+    <NavisVersion>2019</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-2020|AnyCPU' ">
@@ -174,7 +174,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2020</NavisVersion>
+    <NavisVersion>2020</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2020|AnyCPU'">
@@ -186,7 +186,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2020</NavisVersion>
+    <NavisVersion>2020</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2021|AnyCPU'">
@@ -198,7 +198,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2021</NavisVersion>
+    <NavisVersion>2021</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-2021|AnyCPU'">
@@ -211,7 +211,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2021</NavisVersion>
+    <NavisVersion>2021</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-2023|AnyCPU' ">
@@ -224,7 +224,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2023</NavisVersion>
+    <NavisVersion>2023</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-2023|AnyCPU'">
@@ -236,7 +236,7 @@
     <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-	<NavisVersion>2023</NavisVersion>
+    <NavisVersion>2023</NavisVersion>
     <AssemblyName>$(AssemblyName)</AssemblyName>
   </PropertyGroup>
   <!-- MULTIVERSION CONFIGURATION END -->
@@ -248,16 +248,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2015\Autodesk.Navisworks.Api.dll</HintPath>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.ComApi" Condition="'$(Configuration)' == 'Debug-2015'">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2015\Autodesk.Navisworks.ComApi.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Autodesk.Navisworks.Interop.ComApi" Condition="'$(Configuration)' == 'Debug-2015'">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2015\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
     </Reference>
     <!-- 2016 -->
     <Reference Include="Autodesk.Navisworks.Api" Condition="'$(Configuration)' == 'Debug-2016'">
@@ -291,7 +281,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2017\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
     </Reference>
-	<!-- 2023 -->
+    <!-- 2023 -->
     <Reference Include="Autodesk.Navisworks.Api" Condition="'$(Configuration)' == 'Debug-2023'">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2023\Autodesk.Navisworks.Api.dll</HintPath>
@@ -356,7 +346,7 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2017\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
     </Reference>
-	 <!-- 2023 -->
+    <!-- 2023 -->
     <Reference Include="Autodesk.Navisworks.Api" Condition="'$(Configuration)' == 'Release-2023'">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2023\Autodesk.Navisworks.Api.dll</HintPath>
