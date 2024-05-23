@@ -24,7 +24,7 @@ namespace Bcfier.Api
         return null;
 
 
-      var request = new RestRequest("repos/teocomi/bcfier/releases", Method.GET);
+      var request = new RestRequest("repos/teocomi/bcfier/releases", Method.Get);
       request.AddHeader("Content-Type", "application/json");
       request.RequestFormat = DataFormat.Json;
       request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json"; };
@@ -37,7 +37,7 @@ namespace Bcfier.Api
     internal static GitHubRelease GetLatestRelease()
     {
 
-      var request = new RestRequest("repos/teocomi/bcfier/releases/latest", Method.GET);
+      var request = new RestRequest("repos/teocomi/bcfier/releases/latest", Method.Get);
       request.AddHeader("Content-Type", "application/json");
       request.RequestFormat = DataFormat.Json;
 
@@ -46,13 +46,13 @@ namespace Bcfier.Api
       return !CheckResponse(response, HttpStatusCode.OK) ? null : response.Data;
     }
 
-    private static async Task<IRestResponse<T>> DoTaskAsync<T>(RestRequest request, CancellationTokenSource cancel) where T : class
+    private static async Task<RestResponse<T>> DoTaskAsync<T>(RestRequest request, CancellationTokenSource cancel) where T : class
     {
-      IRestResponse<T> response = null;
+      RestResponse<T> response = null;
       try
       {
         if (cancel != null)
-          response = await Client.ExecuteTaskAsync<T>(request, cancel.Token);
+          response = await Client.ExecuteAsync<T>(request, cancel.Token);
       }
       catch (OperationCanceledException ex)
       {
@@ -62,7 +62,7 @@ namespace Bcfier.Api
       return response;
     }
 
-    private static bool CheckResponse(IRestResponse response, HttpStatusCode expectedCode)
+    private static bool CheckResponse(RestResponse response, HttpStatusCode expectedCode)
     {
       try
       {

@@ -13,7 +13,11 @@ namespace Bcfier.Navisworks.Entry
   [Command("bcfierBtn", DisplayName = "BCFier", Icon = "BCFierIcon16x16.png", LargeIcon = "BCFierIcon32x32.png", ToolTip = "BCFier", ExtendedToolTip = "BCFier")]
   public class CmdMain : CommandHandlerPlugin
   {
-#if Version2023
+#if Version2024
+
+    public const string NavisVersion = "2024";
+
+#elif Version2023
 
     public const string NavisVersion = "2023";
 
@@ -30,10 +34,10 @@ namespace Bcfier.Navisworks.Entry
           public const string NavisVersion = "2016";
 
 #endif
-    /// <summary>
-    /// Constructor, just initialises variables.
-    /// </summary>
-    public CmdMain()
+        /// <summary>
+        /// Constructor, just initialises variables.
+        /// </summary>
+        public CmdMain()
     {
 
     }

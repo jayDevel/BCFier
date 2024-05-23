@@ -463,7 +463,7 @@ namespace Bcfier.Bcf.Bcf2
 
     private Point bottomRight;
 
-    private int sheetID;
+    private long sheetID;
 
     private string sheetName;
 
@@ -488,7 +488,7 @@ namespace Bcfier.Bcf.Bcf2
     }
 
     /// <remarks/>
-    public int SheetID
+    public long SheetID
     {
       get { return this.sheetID; }
       set { this.sheetID = value; }

@@ -30,7 +30,7 @@ namespace Bcfier.Revit.Data
       //if BPL is set to 0,0,0 not always it corresponds to Revit's origin
 
       XYZ origin = new XYZ(0, 0, 0);
-#if Version2019 || Version2020 || Version2021 || Version2022 || Version2023
+#if Version2019 || Version2020 || Version2021 || Version2022 || Version2023 || Version2024
       ProjectPosition position = doc.ActiveProjectLocation.GetProjectPosition(origin);
 #else
             ProjectPosition position = doc.ActiveProjectLocation.get_ProjectPosition(origin);
@@ -90,10 +90,10 @@ namespace Bcfier.Revit.Data
     /// <returns></returns>
     public static double ToMeters(this double feet)
     {
-#if Version2021 || Version2022 || Version2023
+#if Version2021 || Version2022 || Version2023 || Version2024
       return UnitUtils.ConvertFromInternalUnits(feet, UnitTypeId.Meters);
 #else
-      return UnitUtils.ConvertFromInternalUnits(feet, DisplayUnitType.DUT_METERS);
+            return UnitUtils.ConvertFromInternalUnits(feet, DisplayUnitType.DUT_METERS);
 #endif
     }
     /// <summary>
@@ -103,7 +103,7 @@ namespace Bcfier.Revit.Data
     /// <returns></returns>
     public static double ToFeet(this double meters)
     {
-#if Version2021 || Version2022 || Version2023
+#if Version2021 || Version2022 || Version2023 || Version2024
       return UnitUtils.ConvertToInternalUnits(meters, UnitTypeId.Meters);
 #else
             return UnitUtils.ConvertToInternalUnits(meters, DisplayUnitType.DUT_METERS);

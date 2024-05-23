@@ -38,7 +38,7 @@ namespace Bcfier.Revit.Data
         {
           v.SheetCamera = new SheetCamera
           {
-            SheetID = uidoc.ActiveView.Id.IntegerValue,
+            SheetID = uidoc.ActiveView.Id.Value,
             SheetName = uidoc.ActiveView.Name,
             TopLeft = new Point { X = topLeft.X, Y = topLeft.Y, Z = topLeft.Z },
             BottomRight = new Point { X = bottomRight.X, Y = bottomRight.Y, Z = bottomRight.Z }
@@ -174,7 +174,7 @@ namespace Bcfier.Revit.Data
           {
             OriginatingSystem = versionName,
             IfcGuid = IfcGuid.ToIfcGuid(ExportUtils.GetExportId(doc, x)),
-            AuthoringToolId = x.IntegerValue.ToString()
+            AuthoringToolId = x.Value.ToString()
           }).ToArray();
 
         }
@@ -187,7 +187,7 @@ namespace Bcfier.Revit.Data
           {
             OriginatingSystem = versionName,
             IfcGuid = IfcGuid.ToIfcGuid(ExportUtils.GetExportId(doc, x)),
-            AuthoringToolId = x.IntegerValue.ToString()
+            AuthoringToolId = x.Value.ToString()
           }).ToArray();
         }
 
@@ -196,7 +196,7 @@ namespace Bcfier.Revit.Data
         {
           OriginatingSystem = versionName,
           IfcGuid = IfcGuid.ToIfcGuid(ExportUtils.GetExportId(doc, x)),
-          AuthoringToolId = x.IntegerValue.ToString()
+          AuthoringToolId = x.Value.ToString()
         }).ToArray();
 
        

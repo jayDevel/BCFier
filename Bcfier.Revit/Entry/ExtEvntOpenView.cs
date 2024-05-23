@@ -266,7 +266,7 @@ namespace Bcfier.Revit.Entry
              let view = elem as View3D
              select view;
     }
-    private IEnumerable<View> getSheets(Document doc, int id, string stname)
+    private IEnumerable<View> getSheets(Document doc, long id, string stname)
     {
       ElementId eid = new ElementId(id);
       return from elem in new FilteredElementCollector(doc).OfClass(typeof(View))
